@@ -1,26 +1,45 @@
-import imglanding from '../assets/images/landing-img.png'
-import img from '../assets/images/bg-curvy-desktop.svg'
+import { Link } from "react-router-dom";
+import LandingImg from "/src/assets/images/landing-img.png";
 function Landing() {
   return (
-    <section className={`landing  flex justify-center items-center flex-col bg-[#1c2230] `} >
-      <div className="container pt-[200px]">
-        <div div className="img-landing w-[750px] mx-auto max-w-full" >
-          <img className='w-full h-fit' src={imglanding} alt="img_landing" />
-        </div >
-        <div className="text text-white text-center ">
-          <h1 className=' mb-[15px] text-[30px] md:text-[40px] font-semibold md-[15px]'>All your files in one secure location, <br />
-            accessible anywhere.</h1>
-          <p className='mb-[15px] font-normal text-lg px-[15px] md:w-[600px] mx-auto maxw-full  '>Fylo stores all your most important files in one secure location.
-            Access them wherever you need, share and collaborate with
-            friends family, and co-workers.</p>
-          <button className='bg-[#42b0d1] hover:bg-[#8cdae4] transition-all duration-200 w-[200px] h-[60px] rounded-[30px]'>Get Started</button>
+    <section className="bg-[#1c2230]">
+      <div className="container">
+        <div className="element-center flex-col pt-[200px] relative z-20">
+          <div className="w-[750px] max-w-full landing">
+            <img
+              src={LandingImg}
+              alt="landing-img"
+              className="w-full h-fit object-contain"
+            />
+          </div>
+          <div className="text-center my-[30px] ">
+            <h1 className="text-white text-[30px] md:text-[40px] font-semibold mb-[15px]">
+              All your files in one secure location,
+              <br />
+              accessible anywhere.
+            </h1>
+            <p className="text-white font-normal text-md px-[15px] md:w-[600px] md:mx-auto">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+              iste deserunt totam itaque nisi veniam voluptas vel, eos aliquam
+              nulla impedit commodi.
+            </p>
+          </div>
+          <Link
+            to="/register"
+            className="btn w-[280px] h-[60px] rounded-[30px] element-center mx-auto text-white font-medium"
+          >
+            Get Started
+          </Link>
         </div>
-      </div >
-      <div className='w-full h-[200px]'>
-        <img src={img} className='w-full h-full' alt="img" />
       </div>
-    </section >
-  )
+      <div className="w-full h-[200px]">
+        <img
+          src="/src/assets/images/bg-curvy-desktop.svg"
+          className="w-full h-full"
+        />
+      </div>
+    </section>
+  );
 }
 
-export default Landing
+export default Landing;

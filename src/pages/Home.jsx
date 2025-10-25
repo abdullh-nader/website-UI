@@ -1,16 +1,19 @@
-import Landing from "../components/Landing"
-import Feature from "../components/Feature"
-import StayProductive from "../components/StayProductive"
-import Tesytimonial from "../components/Tesytimonial"
-function Home() {
-    return (
-        <>
-            <Landing />
-            <Feature />
-            <StayProductive />
-            <Tesytimonial />
-        </>
-    )
-}
+import Features from "../components/Features";
+import StayProductive from "../components/StayProductive";
+import Landing from "../components/Landing";
+import { Fragment } from "react";
+import Testimonials from "../components/Testimonials";
+import GetStarted from "../components/GetStarted";
 
-export default Home
+function Home() {
+  return (
+    <Fragment>
+      <Landing />
+      <Features />
+      <StayProductive />
+      <Testimonials />
+      <GetStarted />
+    </Fragment>
+  );
+}
+export default Home;
