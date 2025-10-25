@@ -24,7 +24,7 @@ function Header() {
     })
     return (
         <header ref={headerRef} className=' transition-all duration-200 pt-[50px] fixed top-0 left-0 z-50  w-full flex justify-between items-center'>
-            <div className=' container mx-auto   flex justify-between items-center gap-[30px] sm:gap-0 flex-col  md:flex-row'>
+            <div className=' container  mx-auto   flex justify-between items-center gap-[30px] sm:gap-0 flex-col  md:flex-row'>
                 <img src={logo} alt="logo" />
                 <nav>
                     <ul className=' flex items-center gap-8 '>
