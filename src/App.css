@@ -1,2 +1,10 @@
 @import "tailwindcss";
 
+body{
+  scroll-behavior: smooth;
+  transition: 0.3s;
+  font-family: 'Roboto-flex', sans-serif;
+  font-weight:500;
+  background-color: #181e2a;
+  height: 100vh;
+}

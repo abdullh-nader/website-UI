@@ -1,9 +1,14 @@
 import './App.css'
+import Header from './components/Header'
+import Home from './pages/Home'
+import Footer from './components/Footer'
 function App() {
   return (
-    <div className='bg-amber-900' style={{ width: '200px', height: '200px' }}>
-      <h1 className='text-blue-500'>hello </h1>
-    </div>
+    <>
+      <Header />
+      <Home />
+      <Footer />
+    </>
   )
 }
 
