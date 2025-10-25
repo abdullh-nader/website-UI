@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
+import logo from '/src/assets/images/logo.svg'
 function Header() {
   const [links, setLinks] = useState(["Features", "Team", "Signin"]);
   const headerRef = useRef();
@@ -22,7 +23,7 @@ function Header() {
       <div className="container flex justify-between items-center gap-[30px] sm:gap-0 flex-col sm:flex-row">
         <Link to="/">
           <img
-            src="/src/assets/images/logo.svg"
+            src={logo}
             alt="logo-img"
             className="w-[175px] h-[66px] object-contain"
           />
