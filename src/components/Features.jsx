@@ -31,14 +31,15 @@ function Features() {
           className=" grid grid-cols-1 md:grid-cols-2 gap-[100px] w-[865px] max-w-full mx-auto
     "
         >
-          {items.map((item) => (
-            <FeatureBox
+          {items.map((item) => {
+            const Url = new URL(`../assets/images/${item.icon}`, import.meta.url).href;
+            return <FeatureBox
               key={item.title}
               title={item.title}
-              icon={item.icon}
+              icon={Url}
               desc={item.desc}
             />
-          ))}
+          })}
         </div>
       </div>
     </section>

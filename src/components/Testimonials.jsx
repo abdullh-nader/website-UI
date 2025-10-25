@@ -1,6 +1,6 @@
 import { useState } from "react";
 import TestimonialBox from "./TestimonialBox";
-
+import test from '/src/assets/images/bg-quotes.png'
 function Testimonials() {
   const [testData, setTestData] = useState([
     {
@@ -29,18 +29,20 @@ function Testimonials() {
     <section className="pb-[350px] ">
       <div className="container relative">
         <div className="absolute left-[20px] top-[-35px]">
-          <img src="/src/assets/images/bg-quotes.png" alt="quote" />
+          <img src={test} alt="quote" />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[40px] relative z-10">
-          {testData.map((item) => (
-            <TestimonialBox
+          {testData.map((item) => {
+            const Url = new URL(`../assets/images/${item.image}`, import.meta.url).href;
+
+            return <TestimonialBox
               key={item.id}
               desc={item.desc}
-              image={item.image}
+              image={Url}
               position={item.position}
               name={item.name}
             />
-          ))}
+          })}
         </div>
       </div>
     </section>
